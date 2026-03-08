@@ -24,7 +24,7 @@
                     <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                    <a href="Mi_CV.pdf" class="btn btn-outline-light btn-sm px-3 custom-download-btn" download="Mi_Curriculum_Vitae">
+                    <a href="asset/doc/CV_Romina Natalia Martinez_IT_2026.pdf" class="btn btn-outline-light btn-sm px-3 custom-download-btn" download="CV_Martinez_Romina_Natalia">
                         Descargar CV
                     </a>
                 </li>
@@ -34,7 +34,8 @@
     </nav>
 
     <div class="container content-wrapper">
-        <section id="sobre-mi" class="custom-section">
+
+        <section id="sobre-mi" class="custom-section reveal">
             <div class="row align-items-center">
                 <div class="col-md-5 mb-4 mb-md-0">
                     <img src="asset/img/perfilfoto.png" class="img-fluid" alt="Foto de perfil">
@@ -55,7 +56,7 @@
             </div>
         </section>
 
-        <section id="educacion" class="custom-section">
+        <section id="educacion" class="custom-section reveal">
 
             <div class="row align-items-center">
 
@@ -76,7 +77,7 @@
             </div>
         </section>
 
-        <section id="conocimientos" class="custom-section text-center">
+        <section id="conocimientos" class="custom-section reveal text-center">
             <h2 class="mb-5">Conocimientos</h2>
             <div class="row g-4 justify-content-center">
                 <div class="col-6 col-md-3">
@@ -155,7 +156,7 @@
         </section>
 
 
-        <section id="proyectos" class="custom-section">
+        <section id="proyectos" class="custom-section reveal">
             <h2 class="text-center mb-5">Mis Proyectos</h2>
             
             <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -253,7 +254,7 @@
         </section>
 
 
-        <section id="contacto" class="custom-section">
+        <section id="contacto" class="custom-section reveal">
             <div class="row align-items-center">
                 <div class="col-md-5 mb-4 mb-md-0">
                     <img src="asset/img/imgContactame.png" class="img-fluid rounded" alt="Contacto">
@@ -263,15 +264,15 @@
                     <form id="contact-form">
                         <div class="mb-3">
                             <label class="form-label">Email de contacto</label>
-                            <input type="email" class="form-control" id="user_email" required>
+                            <input type="email" class="form-control" id="user_email" placeholder="ejemplo@correo.com" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Título</label>
-                            <input type="text" class="form-control" id="subject" required>
+                            <input type="text" class="form-control" id="subject" placeholder="Cual es el motivo de consulta?" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Contame en que te puedo ayudar?😁" required></textarea>
                         </div>
                         <button type="submit" id="button-send" class="btn w-100">Enviar Mensaje</button>
                     </form>

@@ -1,26 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contact-form');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            
-            const email = document.getElementById('user-email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            // En este punto podrías usar una API para enviar el correo.
-            // Como ejemplo simple, simulamos la redirección mailto:
-            const mailtoLink = `mailto:martinezromina@outlook.com.ar?subject=${encodeURIComponent(subject)}&body=De: ${email}%0D%0A%0D%0A${encodeURIComponent(message)}`;
-            
-            window.location.href = mailtoLink;
-        });
-    }
-
-    // Aquí puedes agregar efectos de scroll o animaciones más adelante
-    console.log("Portafolio cargado correctamente.");
-});
 
 const btn = document.getElementById('button-send');
 
@@ -43,10 +20,41 @@ document.getElementById('contact-form')
    emailjs.send(serviceID, templateID, params)
     .then(() => {
       btn.innerText = 'Enviar Mensaje';
-      alert('¡Mensaje enviado con éxito!');
+      alert('¡Envio exitoso! Me contactaré con vos lo antes posible. Muchas gracias! :D');
       document.getElementById('contact-form').reset(); 
     }, (err) => {
       btn.innerText = 'Enviar Mensaje';
       alert('Error al enviar: ' + JSON.stringify(err));
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const firstSection = document.querySelector('#sobre-mi');
+    if (firstSection) {
+        setTimeout(() => {
+            firstSection.classList.add('active');
+        }, 150); 
+    }
+
+   
+    const observerOptions = {
+        root: null,
+        threshold: 0.1 
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, observerOptions);
+
+    
+    const otherSections = document.querySelectorAll('.reveal:not(#sobre-mi)');
+    otherSections.forEach(section => {
+        observer.observe(section);
     });
 });
