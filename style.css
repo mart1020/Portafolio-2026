@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Capriola&family=Playwrite+AU+TAS:wght@100..400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@100..400&display=swap');
+
+
+
+
+
+body {
+    background-image: url('asset/img/estampado-flores-acuarela_23-2149484259.jpg'); 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+
+    background-color: rgba(82, 26, 134, 0.849);
+    font-family: "Capriola", sans-serif;
+}
+
+nav {
+    background-color: rgb(82, 26, 134);
+    color: white;
+    font-family: "Capriola", sans-serif;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important; 
+    font-weight: 500; 
+    transition: color 0.3s ease; 
+}
+
+
+.navbar-brand {
+    color: #ffffff !important;
+}
+
+
+.navbar-nav .nav-link:hover {
+    color: #9f90ac !important; 
+}
+
+h2{
+     font-family: "Playwrite AU TAS", cursive;
+}
+
+.btn {
+    background-color: rgba(82, 26, 134, 0.849);
+    color:white
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden; 
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover; 
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border: none;
+}
+
+
+.content-wrapper {
+    max-width: 1000px;
+}
+
+
+.custom-section {
+    padding: 60px 30px;
+    background-color: rgba(255, 255, 255, 0.397); 
+    margin-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.055);
+}
+
+
+.skill-img {
+    transition: transform 0.3s ease;
+}
+
+.skill-img:hover {
+    transform: scale(1.1);
+}
+
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+@media (max-width: 768px) {
+    .custom-section {
+        padding: 40px 20px;
+        margin-bottom: 30px;
+    }
+}
